@@ -103,6 +103,7 @@ pipeline {
                 catch (Exception e) {
                   logData("Build failed with error "+ e +": " + str[1])
                   logData("Skiping remaining changes")
+                  // dont end the flow is build is not present
                   //currentBuild.result = 'FAILURE'
                   //skipRemainingStages = true
                   //sh "exit 4"
